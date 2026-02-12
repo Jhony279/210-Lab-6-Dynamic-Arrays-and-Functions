@@ -7,7 +7,7 @@ using namespace std;
 
 void enterArrayData(double[]);
 void outputArrayData(double[]);
-int sumArray();
+int sumArray(double[]);
 
 const int SIZE = 12;
 
@@ -44,4 +44,13 @@ void outputArrayData(double dArray[]){
         cout << *(dArray + i) << " ";
     }
     cout << endl;
+}
+
+int sumArray(double dArray[]){
+    double sum = 0;
+    for (int i = 0; i < SIZE; i++){
+        sum =+ dArray[i];
+    }
+    cout << sum;
+    return sum;
 }
