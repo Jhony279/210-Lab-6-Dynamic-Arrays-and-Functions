@@ -3,7 +3,9 @@
 #include <iostream>
 using namespace std;
 
-// Function Prototypes:
+void enterArrayData(int*);
+int outputArrayData();
+int sumArray();
 
 /**
  * @brief - Description of main
@@ -13,7 +15,4 @@ int main() {
     return 0;
 }
 
-// Function Definitions:
-
-// Reminder lines must be 80 characters or less, no more than one empty line, no magic numbers,
-// and Reminder to comment code where neccessary.
+void enterArrayData(int *arr){}
