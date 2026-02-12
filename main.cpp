@@ -5,8 +5,8 @@
 #include <iomanip>
 using namespace std;
 
-void enterArrayData(int[]);
-int outputArrayData();
+void enterArrayData(double[]);
+void outputArrayData(double[]);
 int sumArray();
 
 const int SIZE = 12;
@@ -16,22 +16,32 @@ const int SIZE = 12;
  * @return 
 */
 int main() {
-    int *arr = nullptr;
-    arr = new int[SIZE];
+    double *arr = nullptr;
+    arr = new double[SIZE];
+
+    enterArrayData(arr);
+    outputArrayData(arr);
 
     return 0;
 }
 
-void enterArrayData(int dArray[]){
+void enterArrayData(double dArray[]){
     const int spacing = 4;
-    int temp = 0;
-    int *ptrArray = dArray;
+    double temp = 0;
+    double *ptrArray = dArray;
 
     cout << "Data entry for the array" << endl;
     for (int i = 0; i < SIZE; i++){
         cout << setw(spacing) << "> Element #" << i <<": ";
         cin >> temp;
         ptrArray[i] = temp;
-
     }
+}
+
+void outputArrayData(double dArray[]){
+    cout << "Dynamic array member: ";
+    for (int i = 0; i < SIZE; i++){
+        cout << *(dArray + i) << " ";
+    }
+    cout << endl;
 }
