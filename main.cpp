@@ -26,6 +26,10 @@ int main() {
     return 0;
 }
 
+/**
+ * @brief - Description of main
+ * @return 
+*/
 void enterArrayData(double dArray[]){
     const int SPACING = 4;
     double temp = 0;
@@ -37,22 +41,31 @@ void enterArrayData(double dArray[]){
         cin >> temp;
         ptrArray[i] = temp;
     }
+    cout << "Data entry complete." << endl;
 }
 
+/**
+ * @brief - Description of main
+ * @return 
+*/
 void outputArrayData(double dArray[]){
-    cout << "Dynamic array member: ";
+    cout << "Outputting array elements: ";
     for (int i = 0; i < SIZE; i++){
         cout << *(dArray + i) << " ";
     }
     cout << endl;
 }
 
+/**
+ * @brief Adds up all the values of an array
+ * @param dArray An array of double data type
+ * @return The added up value of the array entered
+*/
 int sumArray(double dArray[]){
     double sum = 0;
     for (int i = 0; i < SIZE; i++){
         sum += dArray[i];
     }
-    cout << "Sum of the array: ";
-    cout << sum;
+    cout << "Sum of values: " << sum;
     return sum;
 }
