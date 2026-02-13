@@ -33,7 +33,7 @@ void enterArrayData(double dArray[]){
 
     cout << "Data entry for the array" << endl;
     for (int i = 0; i < SIZE; i++){
-        cout << setw(SPACING) << "> Element #" << i <<": ";
+        cout  << "    > Element #" << i <<": ";
         cin >> temp;
         ptrArray[i] = temp;
     }
