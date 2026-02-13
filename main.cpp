@@ -21,6 +21,7 @@ int main() {
 
     enterArrayData(arr);
     outputArrayData(arr);
+    sumArray(arr);
 
     return 0;
 }
