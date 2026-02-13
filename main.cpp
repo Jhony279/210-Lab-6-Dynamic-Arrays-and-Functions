@@ -9,7 +9,7 @@ void enterArrayData(double[]);
 void outputArrayData(double[]);
 int sumArray(double[]);
 
-const int SIZE = 12;
+const int SIZE = 6;
 
 /**
  * @brief - Description of main
@@ -27,13 +27,13 @@ int main() {
 }
 
 void enterArrayData(double dArray[]){
-    const int spacing = 4;
+    const int SPACING = 4;
     double temp = 0;
     double *ptrArray = dArray;
 
     cout << "Data entry for the array" << endl;
     for (int i = 0; i < SIZE; i++){
-        cout << setw(spacing) << "> Element #" << i <<": ";
+        cout << setw(SPACING) << "> Element #" << i <<": ";
         cin >> temp;
         ptrArray[i] = temp;
     }
@@ -50,8 +50,9 @@ void outputArrayData(double dArray[]){
 int sumArray(double dArray[]){
     double sum = 0;
     for (int i = 0; i < SIZE; i++){
-        sum =+ dArray[i];
+        sum += dArray[i];
     }
+    cout << "Sum of the array: ";
     cout << sum;
     return sum;
 }
