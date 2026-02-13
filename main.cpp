@@ -9,33 +9,41 @@ void enterArrayData(double[]);
 void outputArrayData(double[]);
 int sumArray(double[]);
 
-const int SIZE = 6;
+// Constant for the size of the array
+const int SIZE = 5;
 
 /**
- * @brief - Description of main
+ * @brief Main function of the code, creates a dynamic array and inserts
+ *        it into the 3 functions created
  * @return 
 */
 int main() {
+    // Create a null pointer
     double *arr = nullptr;
+    // Assign pointer to a new dynamic array
     arr = new double[SIZE];
 
+    // Populate array
     enterArrayData(arr);
+    // Print array elements
     outputArrayData(arr);
+    // Print the entire sum of the elements
     sumArray(arr);
 
     return 0;
 }
 
 /**
- * @brief - Description of main
- * @return 
+ * @brief This function populates an array by having the user 
+ *        enter n amount of values  
 */
 void enterArrayData(double dArray[]){
-    const int SPACING = 4;
     double temp = 0;
+    // Create a pointer and assign it to the array being passed
     double *ptrArray = dArray;
 
     cout << "Data entry for the array" << endl;
+    // Loops through array and populates it based on the users input
     for (int i = 0; i < SIZE; i++){
         cout  << "    > Element #" << i <<": ";
         cin >> temp;
@@ -45,11 +53,11 @@ void enterArrayData(double dArray[]){
 }
 
 /**
- * @brief - Description of main
- * @return 
+ * @brief Prints out all the values inside an array
 */
 void outputArrayData(double dArray[]){
     cout << "Outputting array elements: ";
+    // Loop through array and print out each element
     for (int i = 0; i < SIZE; i++){
         cout << *(dArray + i) << " ";
     }
@@ -63,9 +71,12 @@ void outputArrayData(double dArray[]){
 */
 int sumArray(double dArray[]){
     double sum = 0;
+
+    // Loops through all the elements in the array
     for (int i = 0; i < SIZE; i++){
+        // Add the value of the current element into `sum`
         sum += dArray[i];
     }
-    cout << "Sum of values: " << sum;
+    cout << "Sum of values: " << sum << endl;
     return sum;
 }
