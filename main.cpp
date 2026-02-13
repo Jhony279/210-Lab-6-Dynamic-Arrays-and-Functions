@@ -28,7 +28,8 @@ int main() {
     // Print array elements
     outputArrayData(arr);
     // Print the entire sum of the elements
-    sumArray(arr);
+    double arraySum = sumArray(arr);
+    cout << "Sum of values: " << arraySum << endl;
 
     return 0;
 }
@@ -77,6 +78,5 @@ int sumArray(double dArray[]){
         // Add the value of the current element into `sum`
         sum += dArray[i];
     }
-    cout << "Sum of values: " << sum << endl;
     return sum;
 }
